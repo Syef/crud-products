@@ -18,6 +18,13 @@ app.put(`/products/:productId`, (req,res) => res.json({}));
 
 app.delete("/products/:products", (req,res) => res.json({}));
 
+app.get("/", (req,res) => {
+res.json({
+    status: true,
+    apis:["/products"]
+})
+})
+
 app.listen(PORT, () => {
     console.log(`APP Running on http://localhost:${PORT}`)
 });
